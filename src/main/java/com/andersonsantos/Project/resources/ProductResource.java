@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.andersonsantos.Project.entities.Category;
 import com.andersonsantos.Project.entities.Product;
 import com.andersonsantos.Project.services.ProductService;
 
