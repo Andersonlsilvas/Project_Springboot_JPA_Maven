@@ -15,9 +15,7 @@ Este projeto implementa um conjunto de Web Services em Java utilizando o framewo
 ## Modelos de Domínio
 
 <img width="1361" alt="logical Layer" src="https://github.com/Andersonlsilvas/fotos/assets/113280312/f518ada0-1120-42a6-af51-d114ef825196">
-
 <img width="1361" alt="Domain model" src="https://github.com/Andersonlsilvas/fotos/assets/113280312/e2b78c4d-9096-4554-89f0-3fd08a9b6562">
-
 <img width="1361" alt="Domain Instance" src="https://github.com/Andersonlsilvas/fotos/assets/113280312/928ee54e-53bf-44ce-9ba6-9a78a14c01d2">
 
 ## Camadas Lógicas
