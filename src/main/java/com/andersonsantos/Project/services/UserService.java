@@ -3,7 +3,6 @@ package com.andersonsantos.Project.services;
 import java.util.List;
 import java.util.Optional;
 
-import org.hibernate.engine.jdbc.dialect.spi.DatabaseMetaDataDialectResolutionInfoAdapter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -13,6 +12,8 @@ import com.andersonsantos.Project.entities.User;
 import com.andersonsantos.Project.repositories.UserRepository;
 import com.andersonsantos.Project.resources.exceptions.DatabaseException;
 import com.andersonsantos.Project.services.exceptions.ResourceNotFoundException;
+
+import jakarta.persistence.EntityNotFoundException;
 
 @Service
 public class UserService {
@@ -46,10 +47,15 @@ public class UserService {
 	}
 	
 	public User update(Long id, User obj) {
-		User entity = repository.getReferenceById(id);
-		updateData(entity, obj);
-		return repository.save(entity);
+		try {
+			User entity = repository.getReferenceById(id);
+			updateData(entity, obj);
+			return repository.save(entity);
+		} catch	(EntityNotFoundException e) {
+			throw new ResourceNotFoundException(id);
+		}
 	}
+		
 
 	private void updateData(User entity, User obj) {
 		entity.setName(obj.getName());
