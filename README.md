@@ -8,6 +8,7 @@ Este projeto implementa um conjunto de Web Services em Java utilizando o framewo
 - Implementação do modelo de domínio com as seguintes entidades: Pedido, Usuário, Produto, Categoria, Pagamento, Status do Pedido e Item do Pedido.
 - Estruturação das camadas lógicas: Resource (recursos), Service (serviços) e Repository (repositórios).
 - Configuração de um banco de dados de teste utilizando H2.
+- Configuração do banco de dados PostgreSQL.
 - Povoamento automático do banco de dados com dados iniciais.
 - Implementação de operações CRUD (Create, Retrieve, Update, Delete) para cada entidade do modelo de domínio.
 - Tratamento de exceções para garantir a integridade e segurança das operações.
